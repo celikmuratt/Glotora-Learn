@@ -17,8 +17,14 @@ This is the source code for the **Glotora.com.tr** website.
 
 
 ![Screenshot 2025-04-28 202139](https://github.com/user-attachments/assets/70a5f4da-cc51-4efb-b3b8-5ee08635cd27)
+
+
 ![Screenshot 2025-04-28 202121](https://github.com/user-attachments/assets/205c76f4-3ba4-46ed-bfcf-7a385f372f6b)
+
+
 ![Screenshot 2025-04-28 202108](https://github.com/user-attachments/assets/22961999-93a7-4291-89cb-9930b24fc804)
+
+
 ![Screenshot 2025-04-28 202051](https://github.com/user-attachments/assets/206aab83-0762-4306-9903-f240f25c0727)
 
 
