@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Etiketleri -->
+    <title>Hikayeler - Glotora | İngilizce Öğrenirken Keyif Alın</title>
+    <meta name="description" content="Seviyenize uygun hikayelerle İngilizce öğrenin. A1'den C2'ye kadar farklı seviyelerde eğitici ve eğlenceli hikayeler keşfedin!">
+    <meta name="keywords" content="İngilizce hikayeler, seviyelere göre hikayeler, İngilizce öğrenme, A1 hikayeler, C2 hikayeler, İngilizce okuma">
+    <meta name="author" content="Glotora">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Sosyal Medya Paylaşımı için Open Graph Meta Etiketleri -->
+    <meta property="og:title" content="Hikayeler - Glotora | İngilizce Öğrenirken Keyif Alın">
+    <meta property="og:description" content="Seviyenize uygun hikayelerle İngilizce öğrenin. A1'den C2'ye kadar farklı seviyelerde eğitici ve eğlenceli hikayeler keşfedin!">
+    <meta property="og:image" content="https://www.glotora.com.tr/images/story-banner.jpg">
+    <meta property="og:url" content="https://www.glotora.com.tr/stories.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Etiketleri -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hikayeler - Glotora | İngilizce Öğrenirken Keyif Alın">
+    <meta name="twitter:description" content="İngilizce öğrenirken eğlenmek ister misiniz? Seviyenize uygun hikayelerle öğrenmenizi destekliyoruz!">
+    <meta name="twitter:image" content="https://www.glotora.com.tr/images/story-banner.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/fav.png" href="images/fav2.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/fav2.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/fav2.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/fav2.png">
+    
+    <!-- Preload Kritik Kaynaklar -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="css/stories.css" as="style">
+    <link rel="preload" href="js/stories.js" as="script">
+    
+    <!-- CSS Bağlantıları -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stories.css">
+    
+    <!-- Font Awesome - Sadece Kullanılan İkonlar -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+    
+    <!-- Google Fonts - Sadece Kullanılan Fontlar -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <!-- AOS CSS - Lazy Load -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9652063297558379" crossorigin="anonymous"></script>
+    <!-- Critical CSS -->
+    <style>
+        /* Sayfa yüklenirken görünecek minimum stil */
+        .story-card {
+            opacity: 1;
+            transform: none;
+        }
+        
+        @media (min-width: 769px) {
+            .story-card {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Shapes - Mobilde Devre Dışı -->
+    <div class="floating-shapes desktop-only">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" aria-label="Ana Sayfa">
+                <h1>Glotora<span class="logo-dot">.</span></h1>
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" aria-label="Ana Sayfa"><i class="fas fa-home" aria-hidden="true"></i> Ana Sayfa</a>
+            <a href="stories.html" class="active" aria-current="page"><i class="fas fa-book" aria-hidden="true"></i> Hikayeler</a>
+            <a href="translate.html" class="" aria-current="page"><i class="fas fa-language" aria-hidden="true"></i>Çeviri</a>
+
+            
+        </div>
+        <button class="hamburger" aria-label="Menü" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Stories Header -->
+    <header class="stories-header">
+        <div class="container">
+            <h1 data-aos="fade-up">Hikayeler</h1>
+            <p data-aos="fade-up" data-aos-delay="200">Seviyenize uygun hikayelerle İngilizce öğrenin</p>
+        </div>
+    </header>
+
+    <!-- Filter Section -->
+    <section class="filter-section" aria-label="Seviye Filtreleme">
+        <div class="container">
+            <div class="filter-container" data-aos="fade-up">
+                <div class="filter-group">
+                    <h2>Seviye Seçin</h2>
+                    <div class="level-buttons" role="group" aria-label="İngilizce Seviye Seçimi">
+                        <button class="level-btn active" data-level="all" aria-pressed="true">
+                            <span class="level-icon" aria-hidden="true"><i class="fas fa-layer-group"></i></span>
+                            <span class="level-text">Tümü</span>
+                        </button>
+                        <button class="level-btn" data-level="A1">
+                            <span class="level-icon"><i class="fas fa-baby"></i></span>
+                            <span class="level-text">A1</span>
+                        </button>
+                        <button class="level-btn" data-level="A2">
+                            <span class="level-icon"><i class="fas fa-child"></i></span>
+                            <span class="level-text">A2</span>
+                        </button>
+                        <button class="level-btn" data-level="B1">
+                            <span class="level-icon"><i class="fas fa-user-graduate"></i></span>
+                            <span class="level-text">B1</span>
+                        </button>
+                        <button class="level-btn" data-level="B2">
+                            <span class="level-icon"><i class="fas fa-user-tie"></i></span>
+                            <span class="level-text">B2</span>
+                        </button>
+                        <button class="level-btn" data-level="C1">
+                            <span class="level-icon"><i class="fas fa-chalkboard-teacher"></i></span>
+                            <span class="level-text">C1</span>
+                        </button>
+                        <button class="level-btn" data-level="C2">
+                            <span class="level-icon"><i class="fas fa-crown"></i></span>
+                            <span class="level-text">C2</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stories Grid -->
+    <main class="stories-grid">
+        <div class="container">
+            <div class="stories-container">
+                <!-- Story Cards -->
+                <article class="story-card" data-aos="fade-up" data-level="A1">
+                    <div class="story-content">
+                        <div class="story-level" aria-label="Seviye: A1">A1</div>
+                        <h2>Okulda İlk Günüm</h2>
+                        <p>Bir öğrencinin okulda ilk günü hakkında basit bir hikaye, A1 seviyesi öğrenciler için mükemmel.</p>
+                        <a href="story.html" class="read-more" aria-label="Okulda İlk Günüm hikayesini oku">Hikayeyi Oku</a>
+                    </div>
+                </article>
+
+                <!-- Story Card 2 -->
+                <article class="story-card" data-aos="fade-up" data-aos-delay="100" data-level="A2">
+                    <div class="story-content">
+                        <div class="story-level" aria-label="Seviye: A2">A2</div>
+                        <h2>Sihirli Bahçe</h2>
+                        <p>Lily, bir gün gizemli bir bahçe keşfeder ve burada ağaçlar ve çiçeklerle dost olur. Doğanın ona sunduğu sırlar, sabır ve büyüme hakkında değerli dersler verir.</p>
+                        <a href="magic-garden.html" class="read-more" aria-label="Sihirli Bahçe hikayesini oku">Hikayeyi Oku</a>
+                    </div>
+                </article>
+
+                <!-- Story Card 3 -->
+                <article class="story-card" data-aos="fade-up" data-aos-delay="200" data-level="B1">
+                    <div class="story-content">
+                        <div class="story-level" aria-label="Seviye: B1">B1</div>
+                        <h2>Zaman Yolcusunun Günlüğü</h2>
+                        <p>Sarah'ya katılın, eski bir günlüğü keşfeder ve bu günlük sayesinde zamanda yolculuk yapma yeteneği kazanır. </p>
+                        <a href="time-traveler.html" class="read-more" aria-label="Zaman Yolcusunun Günlüğü hikayesini oku">Hikayeyi Oku</a>
+                    </div>
+                </article>
+
+                <!-- Story Card 4 -->
+                <article class="story-card" data-aos="fade-up" data-aos-delay="300" data-level="B2">
+                    <div class="story-content">
+                        <div class="story-level" aria-label="Seviye: B2">B2</div>
+                        <h2>Eski Haritanın Gizemi</h2>
+                        <p>Bir arkeolog, gizli bir hazineye götüren eski bir harita keşfeder. Keşif ve macera dolu heyecan verici bir yolculuk.</p>
+                        <a href="ancient-map.html" class="read-more" aria-label="Eski Haritanın Gizemi hikayesini oku">Hikayeyi Oku</a>
+                    </div>
+                </article>
+
+                <!-- Story Card 5 -->
+                <article class="story-card" data-aos="fade-up" data-aos-delay="400" data-level="C1">
+                    <div class="story-content">
+                        <div class="story-level" aria-label="Seviye: C1">C1</div>
+                        <h2>Aldatmanın Sanatı</h2>
+                        <p>Yüksek sanat dünyasında geçen, entrika ve gizem dolu sofistike bir hikaye. Gerçek ve illüzyonun karmaşık bir öyküsü.</p>
+                        <a href="art-of-deception.html" class="read-more" aria-label="Aldatmanın Sanatı hikayesini oku">Hikayeyi Oku</a>
+                    </div>
+                </article>
+
+                <!-- Story Card 6 -->
+                <article class="story-card" data-aos="fade-up" data-aos-delay="500" data-level="C2">
+                    <div class="story-content">
+                        <div class="story-level" aria-label="Seviye: C2">C2</div>
+                        <h2>Kuantum Paradoksu</h2>
+                        <p>Bir dahiyane bilim insanının gözünden kuantum mekaniğine yönelik entelektüel bir keşif. Zorlu ve düşündürücü bir anlatı..</p>
+                        <a href="quantum-paradox.html" class="read-more" aria-label="Kuantum Paradoksu hikayesini oku">Hikayeyi Oku</a>
+                    </div>
+                </article>
+
+                <!-- Story Card 7 -->
+                <article class="story-card" data-aos="fade-up" data-aos-delay="600" data-level="A1">
+                    <div class="story-content">
+                        <div class="story-level" aria-label="Seviye: A1">A1</div>
+                        <h2>Dost Canavar</h2>
+                        <p>Nazik bir canavar, arkadaşlığın ve kabul etmenin önemini öğrenir. Yeni başlayanlar için iç ısıtan bir hikaye.</p>
+                        <a href="friendly-dragon.html" class="read-more" aria-label="Dost Canavar hikayesini oku">Hikayeyi Oku</a>
+                    </div>
+                </article>
+
+                <!-- Story Card 8 -->
+                <article class="story-card" data-aos="fade-up" data-aos-delay="700" data-level="A2">
+                    <div class="story-content">
+                        <div class="story-level" aria-label="Seviye: A2">A2</div>
+                        <h2>Kayıp Yavru Köpek</h2>
+                        <p>Kaybolan bir yavru köpeği bulan ve ona yardım eden küçük bir kızın, sorumluluk ve merhamet hakkında öğrendiği iç ısıtan bir hikaye.</p>
+                        <a href="lost-puppy.html" class="read-more" aria-label="Kayıp Yavru Köpek hikayesini oku">Hikayeyi Oku</a>
+                    </div>
+                </article>
+
+                <!-- Story Card 9 -->
+                <article class="story-card" data-aos="fade-up" data-aos-delay="800" data-level="B1">
+                    <div class="story-content">
+                        <div class="story-level" aria-label="Seviye: B1">B1</div>
+                        <h2>Dijital Dedektif</h2>
+                        <p>Teknolojiye hakim bir dedektifin, karmaşık bir dijital suçu çözerken teknoloji, gizlilik ve adalet temalarını keşfettiği heyecan verici bir siber gizem.</p>
+                        <a href="digital-detective.html" class="read-more" aria-label="Dijital Dedektif hikayesini oku">Hikayeyi Oku</a>
+                    </div>
+                </article>
+
+                <!-- Story Card 10 -->
+                <article class="story-card" data-aos="fade-up" data-aos-delay="900" data-level="B2">
+                    <div class="story-content">
+                        <div class="story-level" aria-label="Seviye: B2">B2</div>
+                        <h2>Dünya Şefi</h2>
+                        <p>Farklı mutfakları öğrenmek için dünyayı gezen bir şefin hikayesi. Kültür ve mutfak sanatları hakkında zengin bir anlatı.</p>
+                        <a href="global-chef.html" class="read-more" aria-label="Dünya Şefi hikayesini oku">Hikayeyi Oku</a>
+                    </div>
+                </article>
+
+                <!-- Story Card 11 -->
+                <article class="story-card" data-aos="fade-up" data-aos-delay="1000" data-level="C1">
+                    <div class="story-content">
+                        <div class="story-level" aria-label="Seviye: C1">C1</div>
+                        <h2>Yaşamın Soruları</h2>
+                        <p>Sıcak bir kafede, hayatın en büyük soruları üzerine yapılan derin sohbetler. İleri düzey öğrenciler için düşündürücü bir hikaye.</p>
+                        <a href="lifes-questions.html" class="read-more" aria-label="Yaşamın Soruları hikayesini oku">Hikayeyi Oku</a>
+                    </div>
+                </article>
+
+                <!-- Story Card 12 -->
+                <article class="story-card" data-aos="fade-up" data-aos-delay="1100" data-level="C2">
+                    <div class="story-content">
+                        <div class="story-level" aria-label="Seviye: C2">C2</div>
+                        <h2>Edebi Başyapıt</h2>
+                        <p>Gerçeklik ve kurgu arasındaki sınırları keşfeden karmaşık bir anlatı. Yeterlilik seviyesindeki öğrenciler için zorlu bir hikaye.</p>
+                        <a href="literary-masterpiece.html" class="read-more" aria-label="Edebi Başyapıt hikayesini oku">Hikayeyi Oku</a>
+                    </div>
+                </article>
+
+                <!-- Story Card 13 -->
+                <article class="story-card" data-aos="fade-up" data-aos-delay="1200" data-level="A1">
+                    <div class="story-content">
+                        <div class="story-level" aria-label="Seviye: A1">A1</div>
+                        <h2>Benim Ailem</h2>
+                        <p>Basit ve sevimli bir ailenin günlük yaşamından kesitler. Aile üyeleri, ev hayatı ve günlük rutinler hakkında temel İngilizce öğrenmek için ideal.</p>
+                        <a href="my-family.html" class="read-more" aria-label="Benim Ailem hikayesini oku">Hikayeyi Oku</a>
+                    </div>
+                </article>
+
+                <!-- Story Card 14 -->
+                <article class="story-card" data-aos="fade-up" data-aos-delay="1300" data-level="A2">
+                    <div class="story-content">
+                        <div class="story-level" aria-label="Seviye: A2">A2</div>
+                        <h2>Şehirde Bir Gün</h2>
+                        <p>Genç bir öğrencinin şehirde geçirdiği bir günün hikayesi. Alışveriş, yemek yeme ve şehir hayatı hakkında pratik İngilizce öğrenin.</p>
+                        <a href="day-in-city.html" class="read-more" aria-label="Şehirde Bir Gün hikayesini oku">Hikayeyi Oku</a>
+                    </div>
+                </article>
+
+                <!-- Story Card 15 -->
+                <article class="story-card" data-aos="fade-up" data-aos-delay="1400" data-level="B1">
+                    <div class="story-content">
+                        <div class="story-level" aria-label="Seviye: B1">B1</div>
+                        <h2>Yapay Zeka Asistanı</h2>
+                        <p>Bir yazılım geliştiricisinin, yapay zeka asistanı ile yaşadığı ilginç deneyimler. Teknoloji ve etik üzerine düşündürücü bir hikaye.</p>
+                        <a href="ai-assistant.html" class="read-more" aria-label="Yapay Zeka Asistanı hikayesini oku">Hikayeyi Oku</a>
+                    </div>
+                </article>
+
+                <!-- Story Card 16 -->
+                <article class="story-card" data-aos="fade-up" data-aos-delay="1500" data-level="B2">
+                    <div class="story-content">
+                        <div class="story-level" aria-label="Seviye: B2">B2</div>
+                        <h2>İklim Değişikliği</h2>
+                        <p>Bir çevre bilimcinin gözünden iklim değişikliğinin etkileri ve çözüm yolları. Çevre bilinci ve sürdürülebilirlik üzerine kapsamlı bir anlatı.</p>
+                        <a href="climate-change.html" class="read-more" aria-label="İklim Değişikliği hikayesini oku">Hikayeyi Oku</a>
+                    </div>
+                </article>
+
+                <!-- Story Card 17 -->
+                <article class="story-card" data-aos="fade-up" data-aos-delay="1600" data-level="C1">
+                    <div class="story-content">
+                        <div class="story-level" aria-label="Seviye: C1">C1</div>
+                        <h2>Felsefi Yolculuk</h2>
+                        <p>Bir felsefe öğrencisinin, varoluş ve bilgi teorisi üzerine derin düşünceleri. Karmaşık felsefi kavramları İngilizce olarak keşfedin.</p>
+                        <a href="philosophical-journey.html" class="read-more" aria-label="Felsefi Yolculuk hikayesini oku">Hikayeyi Oku</a>
+                    </div>
+                </article>
+
+                <!-- Story Card 18 -->
+                <article class="story-card" data-aos="fade-up" data-aos-delay="1700" data-level="C2">
+                    <div class="story-content">
+                        <div class="story-level" aria-label="Seviye: C2">C2</div>
+                        <h2>Küresel Diplomasi</h2>
+                        <p>Bir diplomatın gözünden uluslararası ilişkiler ve küresel sorunlar. Karmaşık siyasi ve diplomatik kavramları içeren sofistike bir anlatı.</p>
+                        <a href="global-diplomacy.html" class="read-more" aria-label="Küresel Diplomasi hikayesini oku">Hikayeyi Oku</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Glotora. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script>
+        // AOS başlatma - Performans optimizasyonu
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100,
+                disable: 'mobile',
+                startEvent: 'load'
+            });
+
+            // Mobil cihazlarda animasyonları devre dışı bırak
+            if (window.innerWidth < 768) {
+                document.querySelectorAll('[data-aos]').forEach(element => {
+                    element.removeAttribute('data-aos');
+                });
+            }
+        });
+
+        // Sayfa yüklendiğinde animasyonları başlat
+        window.addEventListener('load', function() {
+            document.querySelectorAll('.story-card').forEach((card, index) => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+    <script src="js/stories.js" defer></script>
+</body>
+</html> 

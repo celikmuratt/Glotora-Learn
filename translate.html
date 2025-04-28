@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çeviri - Glotora | İngilizce Çeviri Aracı</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Glotora ile İngilizce metinlerinizi anında çevirin. Profesyonel çeviri aracı ile kelimeleri ve cümleleri Türkçe'ye çevirin.">
+    <meta name="keywords" content="İngilizce çeviri, Türkçe çeviri, metin çeviri, online çeviri, İngilizce Türkçe çeviri">
+    <meta name="author" content="Glotora">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Çeviri - Glotora | İngilizce Çeviri Aracı">
+    <meta property="og:description" content="Glotora ile İngilizce metinlerinizi anında çevirin. Profesyonel çeviri aracı ile kelimeleri ve cümleleri Türkçe'ye çevirin.">
+    <meta property="og:image" content="https://www.glotora.com.tr/images/translate-banner.jpg">
+    <meta property="og:url" content="https://www.glotora.com.tr/translate.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Çeviri - Glotora | İngilizce Çeviri Aracı">
+    <meta name="twitter:description" content="Glotora ile İngilizce metinlerinizi anında çevirin. Profesyonel çeviri aracı ile kelimeleri ve cümleleri Türkçe'ye çevirin.">
+    <meta name="twitter:image" content="https://www.glotora.com.tr/images/translate-banner.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/fav.png" href="images/fav2.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/fav2.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/fav2.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/fav2.png">
+    
+    <!-- CSS Bağlantıları -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/translate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" aria-label="Ana Sayfa">
+                <h1>Glotora<span class="logo-dot">.</span></h1>
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html"><i class="fas fa-home"></i> Ana Sayfa</a>
+            <a href="stories.html"><i class="fas fa-book"></i> Hikayeler</a>
+            <a href="translate.html" class="active"><i class="fas fa-language"></i> Çeviri</a>
+        </div>
+        <button class="hamburger" aria-label="Menü" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Çeviri Bölümü -->
+    <section class="translate-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Çeviri Aracı</span>
+                <h2>İngilizce Metinlerinizi Çevirin</h2>
+                <p>Profesyonel çeviri aracımız ile İngilizce metinlerinizi anında Türkçe'ye çevirin.</p>
+            </div>
+
+            <!-- Yükleniyor göstergesi -->
+            <div id="loadingSpinner" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000;">
+                <i class="fas fa-spinner fa-spin fa-3x"></i>
+            </div>
+
+            <div class="translation-container">
+                <div class="language-controls">
+                    <select id="sourceLang">
+                        <option value="en">İngilizce</option>
+                        <option value="tr">Türkçe</option>
+                        <option value="es">İspanyolca</option>
+                        <option value="fr">Fransızca</option>
+                        <option value="de">Almanca</option>
+                    </select>
+                    
+                    <button id="swapLanguagesBtn">
+                        <i class="fas fa-exchange-alt"></i>
+                    </button>
+                    
+                    <select id="targetLang">
+                        <option value="tr">Türkçe</option>
+                        <option value="en">İngilizce</option>
+                        <option value="es">İspanyolca</option>
+                        <option value="fr">Fransızca</option>
+                        <option value="de">Almanca</option>
+                    </select>
+                </div>
+
+                <div class="text-areas">
+                    <textarea id="sourceText" placeholder="Çevrilecek metni girin..."></textarea>
+                    <textarea id="targetText" placeholder="Çeviri burada görünecek..." readonly></textarea>
+                </div>
+
+                <button id="translateBtn" class="translate-btn">
+                    <i class="fas fa-language"></i> Çevir
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+
+    <script src="js/translate.js"></script>
+</body>
+</html> 

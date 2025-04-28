@@ -1,0 +1,370 @@
+/* Stories Page Styles */
+:root {
+    --container-width: min(1200px, 95%);
+    --card-padding: clamp(1rem, 2vw, 2rem);
+    --header-padding: clamp(3rem, 5vw, 6rem);
+    --grid-gap: clamp(1rem, 2vw, 2rem);
+    --card-radius: clamp(10px, 1.5vw, 20px);
+    --transition-speed: 0.3s;
+}
+
+.container {
+    width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* Rengi değiştirmek isterseniz, burada belirtebilirsiniz */
+}
+
+/* Stories Header */
+.stories-header {
+    padding: var(--header-padding) 0;
+    text-align: center;
+    background: linear-gradient(135deg, #303434, #303434);
+    margin: 2rem 0;
+    border: 1px solid rgba(246, 0, 254, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.stories-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, transparent, rgba(156, 15, 152, 0.1), transparent);
+    transform: translateX(-100%);
+    transition: var(--transition-speed);
+}
+
+.stories-header:hover::before {
+    transform: translateX(100%);
+}
+
+.stories-header h1 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.stories-header h1::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, #ffffff, #fefefe);
+    margin: 1rem auto;
+    border-radius: 2px;
+}
+
+.stories-header p {
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+/* Filter Section */
+.filter-section {
+    padding: clamp(1rem, 2vw, 2rem) 0;
+    background: var(--dark-bg);
+    margin: 2rem 0;
+    border-radius: var(--card-radius);
+    border: 1px solid rgba(108, 99, 255, 0.1);
+}
+
+.filter-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.filter-group h2 {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    color: var(--heading-color);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.level-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(0.5rem, 1vw, 1rem);
+    justify-content: center;
+    align-items: center;
+}
+
+.level-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: clamp(0.8rem, 1.5vw, 1rem) clamp(1rem, 2vw, 1.5rem);
+    border: none;
+    border-radius: var(--card-radius);
+    background: var(--card-bg);
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    min-width: clamp(80px, 10vw, 100px);
+    box-shadow: var(--shadow-1);
+    border: 1px solid rgba(108, 99, 255, 0.1);
+}
+
+.level-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-2);
+    background: var(--card-bg-hover);
+}
+
+.level-btn.active {
+    background: var(--gradient-1);
+    color: var(--white);
+    border: none;
+    box-shadow: var(--neon-shadow);
+}
+
+.level-icon {
+    font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+    margin-bottom: 0.5rem;
+    transition: transform var(--transition-speed) ease;
+}
+
+.level-text {
+    font-size: clamp(0.8rem, 1vw, 1rem);
+    font-weight: 500;
+    transition: transform var(--transition-speed) ease;
+}
+
+.level-btn:hover .level-icon {
+    transform: scale(1.1);
+}
+
+.level-btn:hover .level-text {
+    transform: translateY(-2px);
+}
+
+/* Stories Grid */
+.stories-grid {
+    padding: clamp(1rem, 2vw, 2rem) 0 clamp(2rem, 4vw, 4rem);
+    background: var(--dark-bg);
+    min-height: calc(100vh - 200px);
+    border-radius: var(--card-radius);
+    border: 1px solid rgba(108, 99, 255, 0.1);
+}
+
+.stories-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 350px), 1fr));
+    gap: var(--grid-gap);
+    padding: 1rem;
+}
+
+/* Story Card */
+.story-card {
+    background: var(--white);
+    border-radius: var(--card-radius);
+    padding: var(--card-padding);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all var(--transition-speed) ease;
+    opacity: 0;
+    transform: translateY(20px);
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+}
+
+.story-card:hover {
+    transform: translateY(-5px) translateZ(0);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.story-content {
+    padding: clamp(1rem, 2vw, 2rem);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.story-level {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--gradient-1);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: clamp(0.8rem, 1vw, 0.9rem);
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: var(--shadow-1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.story-card h2 {
+    font-size: clamp(1.5rem, 2vw, 1.8rem);
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    padding-right: 4rem;
+}
+
+.story-card p {
+    color: var(--text-color);
+    font-size: clamp(1rem, 1.2vw, 1.1rem);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    flex: 1;
+}
+
+.read-more {
+    display: inline-block;
+    padding: clamp(0.6rem, 1vw, 0.8rem) clamp(1rem, 1.5vw, 1.5rem);
+    background: var(--gradient-1);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all var(--transition-speed) ease;
+    font-size: clamp(0.9rem, 1vw, 1rem);
+    text-align: center;
+    margin-top: auto;
+    box-shadow: var(--shadow-1);
+}
+
+.read-more:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+
+    .story-card {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+    
+    .story-card:hover {
+        transform: none;
+    }
+
+    .stories-container {
+        grid-template-columns: 1fr;
+    }
+
+    .level-buttons {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .level-buttons::-webkit-scrollbar {
+        display: none;
+    }
+
+    .level-btn {
+        flex-shrink: 0;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .stories-header,
+    .filter-section,
+    .read-more,
+    .desktop-only {
+        display: none;
+    }
+
+    .story-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .stories-container {
+        display: block;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .stories-header {
+        padding: 3rem 0;
+    }
+
+    .stories-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .stories-header p {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .story-content {
+        padding: 1.2rem;
+    }
+
+    .filter-group h2 {
+        font-size: 1.2rem;
+    }
+
+    .level-buttons {
+        gap: 0.3rem;
+    }
+
+    .level-btn {
+        padding: 0.6rem 0.8rem;
+        min-width: 70px;
+    }
+
+    .level-icon {
+        font-size: 1rem;
+    }
+
+    .level-text {
+        font-size: 0.8rem;
+    }
+}
+
+.level-btn .level-icon img {
+    width: 20px;  /* Resmin genişliğini ayarlayın */
+    height: 20px; /* Resmin yüksekliğini ayarlayın */
+    object-fit: contain; /* Resmin oranlarını koruyarak sığdırılmasını sağlar */
+}
